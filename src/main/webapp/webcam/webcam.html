@@ -11,9 +11,11 @@
 
 <p>
     In this task you will use the
-    <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia API</a>
-    to connect your laptop's webcam to a video element. If you are using Chrome you have to enable the flag
-    <a>chrome://flags/#enable-experimental-web-platform-features</a> to turn on the API.
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" target="_blank">getUserMedia
+        API</a>
+    to connect your laptop's webcam to a video element. <!--If you are using Chrome you might have to enable the flag
+    <a>chrome://flags/#enable-experimental-web-platform-features</a> to turn on the API.-->
+    First you have to grant the browser access to the webcam. A popup should appear near the address bar.
 
 </p>
 
@@ -22,9 +24,9 @@
 </p>
 <ul>
     <li>Use the getUserMedia function to request a video stream from your webcam</li>
-    <li>In the success function: Use URL.createObjectURL to create a URL from the stream</li>
-    <li>Set the video's <code>src</code> attribute to this URL</li>
-    <li>Again, <a href="http://lmgtfy.com/?q=getUserMedia mediaDevices examples">Google is your friend</a></li>
+    <li>In the success function: Set the video source by using HTMLMediaElement.srcObject.</li>
+    <li>Again, <a href="http://lmgtfy.com/?q=getUserMedia mediaDevices examples" target="_blank">Google is your
+        friend</a></li>
 </ul>
 
 <p>
