@@ -33,3 +33,7 @@ canvas {
 #snapshots img:nth-child(odd) {
     border-color: lightblue;
 }
+
+#allowImage {
+    height: 130px;
+}

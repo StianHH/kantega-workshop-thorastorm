@@ -24,9 +24,7 @@ window.addEventListener("load", function () {
     // See https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
     window.navigator.mediaDevices.getUserMedia({video: true, audio: false})
         .then(function (stream) {
-
             // TODO: Attach the stream to the video, start playing
-
 
         })
         .catch(function (err) {
