@@ -23,6 +23,7 @@ window.addEventListener("load", function () {
         // So, let's iterate over every 4th component:
 
         for (var i = 0; i < pixelColors.length; i += 4) {
+            //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 3, 7 etc..
 
             // Get each color value (0-255)
             var red = pixelColors[i];
@@ -33,16 +34,25 @@ window.addEventListener("load", function () {
             // Calculate the average value  of the color components
             var avg = (red + green + blue) / 3;
 
+            //tip: putting code between /* and */ will make it a comment, commented code will not be executed.
+            //This can be sometimes be better than deleting the code. Example:
+
+            /*This code will not be executed:
+            pixelColors[i] = 0;*/
 
             // Make every second (of 5) stripe black / white
             // TODO: Replace below with your solution!
             var y = Math.floor(i / 4 / canvas.width);
 
+
             if (Math.floor(y / canvas.height * 5) % 2 == 0) {
+                //This code is only executed when the statement between the parentheses is true.
                 // Set each color to the average ("black & white")
                 pixelColors[i] = avg;
                 pixelColors[i + 1] = avg;
                 pixelColors[i + 2] = avg;
+            } else {
+                //This code is executed when the above code is not.
             }
         }
         g.putImageData(imageData, 0, 0);
