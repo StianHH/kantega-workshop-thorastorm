@@ -13,10 +13,13 @@ window.addEventListener("load", function () {
         elapsed.style.marginLeft = 30 + "%";
     });
 
+
     playButton.addEventListener("click", function () {
         // TODO: How do we play the video?
-    });
 
+        //Makes the pause button visible when play is pressed.
+        pauseButton.setAttribute("class", "visible");
+    });
 
     // TODO: Should add similar event listener for pauseButton
 
