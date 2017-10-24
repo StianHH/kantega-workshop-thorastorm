@@ -16,5 +16,15 @@ video {
 }
 
 .controls img:hover {
-    /* Show the "pointer" cursor */
+    /*TODO: Show the "pointer" cursor */
+}
+
+    /*Makes something visible*/
+.visible{
+    visibility: visible;
+}
+
+    /*Makes something disappear*/
+.hidden{
+    visibility: hidden;
 }
