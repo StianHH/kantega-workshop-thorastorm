@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
             var avg = (red + green + blue) / 3;
 
             //tip: putting code between /* and */ will make it a comment, commented code will not be executed.
-            //This can be sometimes be better than deleting the code. Example:
+            //This can sometimes be better than deleting the code. Example:
 
             /*This code will not be executed:
             pixelColors[i] = 0;*/
