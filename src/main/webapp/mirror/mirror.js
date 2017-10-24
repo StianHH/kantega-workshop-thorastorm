@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
     var g = canvas.getContext("2d");
 
     video.addEventListener("timeupdate", function () {
-        elapsed.style.width = Math.ceil(video.currentTime * 320 / video.duration) + "px";
+        elapsed.style.width = Math.ceil(video.currentTime * 354 / video.duration) + "px";
     });
 
     video.addEventListener("play", function () {
@@ -42,14 +42,18 @@ window.addEventListener("load", function () {
 
 
     function drawSomething(image) {
-
+        //TODO: set placement of drawing
         var x = Math.random() * canvas.width;
         var y = Math.random() * canvas.height;
-        var size = Math.max((canvas.height) * Math.random(), 40);
-        g.drawImage(image, x, y, size, size);
+        //TODO: set size of drawing
+        var height = Math.max((canvas.height) * Math.random(), 40);
+        var width = Math.max((canvas.height) * Math.random(), 40);
+        g.drawImage(image, x, y, height, width);
     }
 
 
     // TODO: Call drawSomething for every frame so the video plays smoothly
+
+    //TIP: requestAnimationFrame(()=>somefunction)
 
 });
