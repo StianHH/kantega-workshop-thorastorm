@@ -72,14 +72,12 @@ window.addEventListener("load", function () {
                 + Math.pow(targetColor.blue - blue, 2));
 
             // TODO: Find a better threshold to give a tighter match?
-            var threshold = 20;  // Smaller threshold will lead to fewer pixels that will change
+            var threshold = 70;  // Smaller threshold will lead to fewer pixels that will change
 
             if (diff < threshold) {
                 // TODO: Replace the pixel values to create a different color
                 //Hint: Use the pixels array to get a pixel value, and give it a new value
-                pixels[i] = 241;
-                pixels[i + 1] = 58;
-                pixels[i + 2] = 254;
+
 
                 // Update the leftmost, topmost, rightmost and bottommost locations
                 leftMost = Math.min(leftMost, x);
@@ -96,6 +94,8 @@ window.addEventListener("load", function () {
 
         // TODO: Use leftMost, rightMost, topMost, bottomMost, to draw a bounding box around the Post-it
         // Create a rectangle by using the function: g.rect(x, y, width, height)
+        // Sketch the rectangle by using the g.stroke() function
+
         g.rect(leftMost, bottomMost, rightMost-leftMost, topMost-bottomMost);
         g.stroke();
         window.requestAnimationFrame(animationLoop);
