@@ -96,8 +96,6 @@ window.addEventListener("load", function () {
         // Create a rectangle by using the function: g.rect(x, y, width, height)
         // Sketch the rectangle by using the g.stroke() function
 
-        g.rect(leftMost, bottomMost, rightMost-leftMost, topMost-bottomMost);
-        g.stroke();
         window.requestAnimationFrame(animationLoop);
     }
 
