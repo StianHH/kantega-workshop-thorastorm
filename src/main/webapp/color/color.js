@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
         // So, let's iterate over every 4th component:
 
         for (var i = 0; i < pixelColors.length; i += 4) {
-            //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 3, 7 etc..
+            //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 4, 8 etc..
 
             // Get each color value (0-255)
             var red = pixelColors[i];
