@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
         var rightMost = 0;
         var bottomMost = 0;
 
-        //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 3, 7 etc..
+        //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 4, 8 etc..
         //If the array contains [red, green, blue], and we write pixels[0], we get the first element in the array: red
         for (var i = 0; i < pixels.length; i += 4) {
 
