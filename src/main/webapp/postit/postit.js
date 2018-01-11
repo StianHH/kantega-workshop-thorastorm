@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
     var error = document.querySelector(".error");
 
-    var targetColor = {red: 0, green: 255, blue: 0};
+    var targetColor = {red: 127, green: 96, blue: 68};
     var targetColorDiv = document.querySelector(".target");
     var targetColorText = document.querySelector(".targettext");
 
@@ -48,7 +48,8 @@ window.addEventListener("load", function () {
         var rightMost = 0;
         var bottomMost = 0;
 
-
+        //this code "selects" every 4th index in the array. "i" is the index of every selected element. i = 0, 4, 8 etc..
+        //If the array contains [red, green, blue], and we write pixels[0], we get the first element in the array: red
         for (var i = 0; i < pixels.length; i += 4) {
 
             // Pixel index
@@ -59,6 +60,7 @@ window.addEventListener("load", function () {
             var y = Math.floor(p / canvas.width);
 
             // Get each color value (0-255)
+            // Remember that i is the index of the array
             var red = pixels[i];
             var green = pixels[i + 1];
             var blue = pixels[i + 2];
@@ -70,10 +72,11 @@ window.addEventListener("load", function () {
                 + Math.pow(targetColor.blue - blue, 2));
 
             // TODO: Find a better threshold to give a tighter match?
-            var threshold = 70;
+            var threshold = 70;  // Smaller threshold will lead to fewer pixels that will change
 
             if (diff < threshold) {
                 // TODO: Replace the pixel values to create a different color
+                //Hint: Use the pixels array to get a pixel value, and give it a new value
 
 
                 // Update the leftmost, topmost, rightmost and bottommost locations
@@ -81,13 +84,17 @@ window.addEventListener("load", function () {
                 topMost = Math.min(topMost, y);
                 rightMost = Math.max(rightMost, x);
                 bottomMost = Math.max(bottomMost, y);
+
+
             }
         }
 
         g.putImageData(imageData, 0, 0);
 
-
+        g.beginPath();
         // TODO: Use leftMost, rightMost, topMost, bottomMost, to draw a bounding box around the Post-it
+        // Create a rectangle by using the function: g.rect(x, y, width, height), remember that y=0 and x=0 is the top left corner
+        // Sketch the rectangle by using the g.stroke() function
 
         window.requestAnimationFrame(animationLoop);
     }
