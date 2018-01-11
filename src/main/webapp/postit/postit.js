@@ -91,9 +91,9 @@ window.addEventListener("load", function () {
 
         g.putImageData(imageData, 0, 0);
 
-
+        g.beginPath();
         // TODO: Use leftMost, rightMost, topMost, bottomMost, to draw a bounding box around the Post-it
-        // Create a rectangle by using the function: g.rect(x, y, width, height)
+        // Create a rectangle by using the function: g.rect(x, y, width, height), remember that y=0 and x=0 is the top left corner
         // Sketch the rectangle by using the g.stroke() function
 
         window.requestAnimationFrame(animationLoop);
