@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
 
         var pixelColors = imageData.data;
 
-        // pixelColors is an array color components: [red, green, blue, alpha, red, green, blue, alpha, ..]
+        // pixelColors is an array of color components: [red, green, blue, alpha, red, green, blue, alpha, ..]
         // So, let's iterate over every 4th component:
 
         for (var i = 0; i < pixelColors.length; i += 4) {
@@ -40,10 +40,11 @@ window.addEventListener("load", function () {
             /*This code will not be executed:
             pixelColors[i] = 0;*/
 
-            // Make every second (of 5) stripe black / white
-            // TODO: Replace below with your solution!
-            var y = Math.floor(i / 4 / canvas.width);
 
+            // TODO: Replace below with your solution!
+
+            // Make every second (of 5) stripe black / white
+            var y = Math.floor(i / 4 / canvas.width);
 
             if (Math.floor(y / canvas.height * 5) % 2 == 0) {
                 //This code is only executed when the statement between the parentheses is true.
