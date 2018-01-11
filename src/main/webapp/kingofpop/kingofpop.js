@@ -45,24 +45,26 @@ window.addEventListener("load", function () {
                 + Math.pow(targetColor.green - green, 2)
                 + Math.pow(targetColor.blue - blue, 2));
 
+            var threshold = 20;
+            if (diff < threshold) {
+                // TODO: Replace matching pixels with corresponding pixels from kingPixels
 
-            // TODO: Replace matching pixels with corresponding pixels from kingPixels
-
-            // Count this pixel if matching
-            numMatchingPixels++;
-
+                // Count this pixel if matching
+                numMatchingPixels++;
+            }
         }
 
         g.putImageData(imageData, 0, 0);
 
         if (numMatchingPixels > 1000) {
+            //The post-it is in frame
             if (!playing) {
                 king.play();
                 playing = true;
             }
         } else {
             // The post-it was removed
-            // TODO: If the video is playing, pause it
+            // TODO: If the video is playing, pause it and set "playing" to false;
 
         }
 
