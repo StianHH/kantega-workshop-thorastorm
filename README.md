@@ -2,7 +2,7 @@
 
 ## Requirements ##
 
-* You'll need to have [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed
+* You'll need to have [Java JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) installed
 
 * You'll need a text editor e.g. [Sublime Text](https://www.sublimetext.com/) 
 ## Getting Started ##
