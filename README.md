@@ -9,11 +9,11 @@
 
 * Git clone the workshop:
 
-        git clone https://github.com/kantega/html5pixelworkshop.git
+        git clone https://github.com/StianHH/kantega-workshop-thorastorm/html5pixelworkshop.git
 
 * If you don't have Git, you can download the workshop as a ZIP file:
 
-        https://github.com/kantega/html5pixelworkshop/archive/master.zip
+        https://github.com/StianHH/kantega-workshop-thorastorm/archive/master.zip
 
 * [Make sure the Environment Variable JAVA_HOME points the location of your Java/JDK](java.md).
 
